@@ -3,10 +3,7 @@ import ExpenseForm from "./ExpenseForm";
 
 const NewExpense = (props) => {
   const saveExpenseDataHandler = (enteredExpenseData) => {
-    const expenseData = {
-      ...enteredExpenseData,
-      id: Math.random.toString()
-    };
+    const expenseData = enteredExpenseData[0];
     props.onAddExpense(expenseData);
   };
   return (
